@@ -89,7 +89,7 @@ const About = () => {
             </div>
           </div>
           {/* Backend*/}
-          <h2 className="text-2xl font-bold text-[#fe5617] text-center mt-1">
+          <h2 className="text-2xl font-bold text-[#fe5617] text-center pb-2">
             Back-End
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
@@ -111,7 +111,7 @@ const About = () => {
             </div>
           </div>
           {/* Tools */}
-          <h2 className="text-2xl font-bold text-[#fe5617] text-center mt-1">
+          <h2 className="text-2xl font-bold text-[#fe5617] text-center pb-2">
             Tools
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
