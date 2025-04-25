@@ -1,9 +1,10 @@
 import { useState } from "react";
-import { FaGithub, FaLinkedin, FaInstagram,} from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaEnvelope,} from "react-icons/fa";
 import { HiMenuAlt3, HiX } from "react-icons/hi";
 import { Link } from "react-scroll";
 import ThemeToggle from "./ThemeToggle";
-import { IoMail} from "react-icons/io5";
+
+
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -63,21 +64,24 @@ const Header = () => {
           >
             <a
               href="https://github.com/ChandraBose-11"
+              target="_blank"
               className="  hover:text-[#fe5617] "
             >
               <FaGithub size={29} />
             </a>
             <a
-              href="https://www.linkedin.com/in/mohammedimrana/"
-              className="hover:text-[#fe5617]"
+              href="https://www.linkedin.com/in/chandra-bose-b838142a1/"
+              target="_blank"
+              
             >
-              <FaLinkedin size={29} />
+              <FaLinkedin size={29} className="text-[#0077B5]" />
             </a>
             <a
             href="mailto:Chandrubose46@gmail.com"
-            className="hover:text-[#fe5617]"
+            target="_blank"
+         
           >
-            <IoMail  size={35} />
+            <FaEnvelope  size={29} className="text-[#c71610]" />
           </a>
           </div>
         </nav>
@@ -88,20 +92,22 @@ const Header = () => {
           <a
             href="https://github.com/ChandraBose-11"
             className="hover:text-[#fe5617]"
+            target="_blank"
           >
             <FaGithub size={29} />
           </a>
           <a
-            href="https://www.linkedin.com/in/mohammedimrana/"
-            className="hover:text-[#fe5617]"
+            href="https://www.linkedin.com/in/chandra-bose-b838142a1/"
+            
+            target="_blank"
           >
-            <FaLinkedin size={29} />
+            <FaLinkedin size={29} className="text-[#0077B5]" />
           </a>
           <a
             href="mailto:Chandrubose46@gmail.com"
-            className="hover:text-[#fe5617]"
+            target="_blank"
           >
-            <IoMail  size={35} />
+            <FaEnvelope  size={29} className="text-[#c71610]" />
           </a>
         </div>
         

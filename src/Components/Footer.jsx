@@ -1,4 +1,4 @@
-import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaInstagram, FaWhatsapp } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -8,7 +8,7 @@ const Footer = () => {
           © {new Date().getFullYear()} Chandra Bose. All rights reserved.
         </p>
         <p className="text-sm md:text-base font-medium">
-          Made with ❤️ by{" "}
+          Made with ❤️ by
           <a href="#" className="underline hover:text-[#ffffff]">
             Chandra Bose
           </a>
@@ -21,7 +21,7 @@ const Footer = () => {
             <FaGithub size={29} />
           </a>
           <a
-            href="https://www.linkedin.com/in/mohammedimrana/"
+            href="https://www.linkedin.com/in/chandra-bose-b838142a1/"
             className="hover:text-[#fe5617]"
           >
             <FaLinkedin size={29} />
@@ -30,7 +30,7 @@ const Footer = () => {
             href="https://www.instagram.com/immucoder/?__pwa=1"
             className="hover:text-[#fe5617]"
           >
-            <FaInstagram size={29} />
+            <FaWhatsapp size={29} />
           </a>
         </div>
       </div>
