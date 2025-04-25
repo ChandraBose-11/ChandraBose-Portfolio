@@ -1,13 +1,14 @@
 import { useState } from "react";
-import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaInstagram,} from "react-icons/fa";
 import { HiMenuAlt3, HiX } from "react-icons/hi";
 import { Link } from "react-scroll";
-
+import ThemeToggle from "./ThemeToggle";
+import { IoMail} from "react-icons/io5";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <div className="bg-[#FFFFFF]">
+    <div className="bg-white dark:bg-gray-900 text-gray-900 dark:text-white">
       <div className="max-w-[90%] mx-auto py-3 flex items-center justify-between font-inter">
         {/* Logo */}
         <div>
@@ -30,7 +31,7 @@ const Header = () => {
         <nav
           className={`${
             isMenuOpen ? "block" : "hidden"
-          } absolute top-[70px] left-0 w-full bg-[#F2EFE5] p-5 lg:p-0 lg:relative lg:block lg:w-auto lg:px-5 lg:py-3 lg:rounded-2xl lg:top-0`}
+          } absolute top-[70px] left-0 w-full bg-[#F2EFE5]  dark:bg-gray-900 text-white-900 dark:text-whitep-5 lg:p-0 lg:relative lg:block lg:w-auto lg:px-5 lg:py-3 lg:rounded-2xl lg:top-0`}
         >
           <ul className="flex flex-col gap-3 lg:flex-row lg:items-center lg:gap-5 text-[14px] font-semibold">
             <Link to="home" smooth={true} duration={500}>
@@ -73,16 +74,17 @@ const Header = () => {
               <FaLinkedin size={29} />
             </a>
             <a
-              href="https://www.instagram.com/immucoder/?__pwa=1"
-              className="hover:text-[#fe5617]"
-            >
-              <FaInstagram size={29} />
-            </a>
+            href="mailto:Chandrubose46@gmail.com"
+            className="hover:text-[#fe5617]"
+          >
+            <IoMail  size={35} />
+          </a>
           </div>
         </nav>
-
+        <ThemeToggle />
         {/* Social Media Links */}
         <div className="hidden lg:flex w-[100px] items-center justify-between">
+          
           <a
             href="https://github.com/ChandraBose-11"
             className="hover:text-[#fe5617]"
@@ -96,12 +98,13 @@ const Header = () => {
             <FaLinkedin size={29} />
           </a>
           <a
-            href="https://www.instagram.com/immucoder/?__pwa=1"
+            href="mailto:Chandrubose46@gmail.com"
             className="hover:text-[#fe5617]"
           >
-            <FaInstagram size={29} />
+            <IoMail  size={35} />
           </a>
         </div>
+        
       </div>
     </div>
   );

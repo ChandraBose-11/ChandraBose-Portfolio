@@ -2,7 +2,7 @@ import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#fe5617] text-white py-6">
+    <footer className="bg-white dark:bg-gray-900 text-gray-900 dark:text-white py-6">
       <div className="max-w-[90%] md:max-w-[75%] mx-auto text-center space-y-2">
         <p className="text-sm md:text-base font-medium">
           © {new Date().getFullYear()} Chandra Bose. All rights reserved.

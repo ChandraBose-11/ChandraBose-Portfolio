@@ -2,6 +2,7 @@ import { FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 import { useState } from "react";
+import { IoMail } from "react-icons/io5";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -44,7 +45,10 @@ const Contact = () => {
   };
 
   return (
-    <div id="contact" className="bg-[#ffffff] min-h-screen flex items-center justify-center">
+    <div
+      id="contact"
+      className="bg-white dark:bg-gray-900 text-gray-900 dark:text-white min-h-screen flex items-center justify-center"
+    >
       <div className="max-w-[90%] md:max-w-[75%] mx-auto font-inter space-y-10 py-10">
         <div className="text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-center text-[#fe5617]">
@@ -63,29 +67,22 @@ const Contact = () => {
             </div>
             <div className="flex items-center gap-3">
               <FaEnvelope className="text-[#fe5617]" size={20} />
-              <span>
-                Chandrubose46@gmail.com</span>
+              <span>Chandrubose46@gmail.com</span>
             </div>
             <div className="flex flex-col items-center gap-3">
               <h2 className="text-xl font-bold">Follow on</h2>
               <div className="flex gap-4">
-                <a
-                  href=""
-                  className="hover:text-[#fe5617]"
-                >
+                <a href="" className="hover:text-[#fe5617]">
                   <FaGithub size={29} />
                 </a>
-                <a
-                  href=""
-                  className="hover:text-[#fe5617]"
-                >
+                <a href="" className="hover:text-[#fe5617]">
                   <FaLinkedin size={29} />
                 </a>
                 <a
-                  href="1"
+                  href="mailto:Chandrubose46@gmail.com"
                   className="hover:text-[#fe5617]"
                 >
-                  <FaInstagram size={29} />
+                  <IoMail size={29} />
                 </a>
               </div>
             </div>
@@ -106,7 +103,7 @@ const Contact = () => {
               value={formData.name}
               onChange={handleChange}
               required
-              className="border border-gray-300 rounded-md p-3"
+              className="border border-gray-300 rounded-md p-3 dark:text-black"
             />
             <input
               type="email"
@@ -115,7 +112,7 @@ const Contact = () => {
               value={formData.email}
               onChange={handleChange}
               required
-              className="border border-gray-300 rounded-md p-3"
+              className="border border-gray-300 rounded-md p-3 dark:text-black"
             />
             <textarea
               name="message"
@@ -123,7 +120,7 @@ const Contact = () => {
               value={formData.message}
               onChange={handleChange}
               required
-              className="border border-gray-300 rounded-md p-3 h-32"
+              className="border border-gray-300 rounded-md p-3 h-32  dark:text-black"
             ></textarea>
             <button
               type="submit"
