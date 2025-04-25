@@ -1,8 +1,8 @@
 import { FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
-import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
+import { FaGithub, FaLinkedin} from "react-icons/fa";
 import { useState } from "react";
-import { IoMail } from "react-icons/io5";
+
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -58,31 +58,38 @@ const Contact = () => {
         <div className="flex flex-col items-center md:flex-row gap-[150px] justify-center">
           <div className="flex flex-col space-y-5 text-lg md:text-xl font-semibold">
             <div className="flex items-center gap-3">
-              <FaLocationDot className="text-[#fe5617]" size={20} />
+              <FaLocationDot className="text-[#ce3939]" size={20} />
               <span>Chennai</span>
             </div>
             <div className="flex items-center gap-3">
-              <FaPhoneAlt className="text-[#fe5617]" size={20} />
+              <FaPhoneAlt className="text-[#27a34e]" size={20} />
               <span>9952978290</span>
             </div>
             <div className="flex items-center gap-3">
-              <FaEnvelope className="text-[#fe5617]" size={20} />
+              <FaEnvelope className="text-[#c24731]" size={20} />
               <span>Chandrubose46@gmail.com</span>
             </div>
             <div className="flex flex-col items-center gap-3">
               <h2 className="text-xl font-bold">Follow on</h2>
               <div className="flex gap-4">
-                <a href="" className="hover:text-[#fe5617]">
+                <a
+                  href="https://github.com/ChandraBose-11"
+                  className="hover:text-[#fe5617]"
+                  target="_blank"
+                >
                   <FaGithub size={29} />
                 </a>
-                <a href="" className="hover:text-[#fe5617]">
-                  <FaLinkedin size={29} />
+                <a
+                  href="https://www.linkedin.com/in/chandra-bose-b838142a1/"
+                  target="_blank"
+                >
+                  <FaLinkedin size={29} className="text-[#0077B5]" />
                 </a>
                 <a
                   href="mailto:Chandrubose46@gmail.com"
                   className="hover:text-[#fe5617]"
                 >
-                  <IoMail size={29} />
+                  <FaEnvelope size={29} className="text-[#c71610]" />
                 </a>
               </div>
             </div>

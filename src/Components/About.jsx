@@ -69,7 +69,10 @@ const About = () => {
               <span className="font-bold">JavaScript</span>
             </div>
             <div className="flex flex-col items-center space-y-2">
-              <SiBootstrap size={40} className="text-[#563d7c]" />
+              <SiBootstrap
+                size={40}
+                className="text-[#563d7c] dark:text-blue-600"
+              />
               <span className="font-bold">Bootstrap</span>
             </div>
             <div className="flex flex-col items-center space-y-2">

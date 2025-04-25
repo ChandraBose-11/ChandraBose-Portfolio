@@ -14,23 +14,24 @@ const Footer = () => {
           </a>
         </p>
         <div className="flex justify-center gap-4 mt-2">
-          <a
+        <a
             href="https://github.com/ChandraBose-11"
             className="hover:text-[#fe5617]"
+            target="_blank"
           >
             <FaGithub size={29} />
           </a>
           <a
             href="https://www.linkedin.com/in/chandra-bose-b838142a1/"
-            className="hover:text-[#fe5617]"
+            target="_blank"
           >
-            <FaLinkedin size={29} />
+            <FaLinkedin size={29} className="text-[#0077B5]" />
           </a>
           <a
             href="https://www.instagram.com/immucoder/?__pwa=1"
-            className="hover:text-[#fe5617]"
+            className="hover:text-[#17fe23]"
           >
-            <FaWhatsapp size={29} />
+            <FaWhatsapp size={29} className="text-green-500" />
           </a>
         </div>
       </div>
