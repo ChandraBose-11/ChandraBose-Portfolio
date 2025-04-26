@@ -1,5 +1,5 @@
 import { TypeAnimation } from "react-type-animation";
-import { FaPhoneAlt, FaEnvelope, FaDownload } from "react-icons/fa";
+import { FaPhoneAlt, FaEnvelope, } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
 import Resume from "../assets/Resume.pdf"
 const Home = () => {
