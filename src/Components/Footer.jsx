@@ -28,7 +28,8 @@ const Footer = () => {
             <FaLinkedin size={29} className="text-[#0077B5]" />
           </a>
           <a
-            href="https://www.instagram.com/immucoder/?__pwa=1"
+            href="https://wa.me/919952978290"
+            target="_blank"
             className="hover:text-[#17fe23]"
           >
             <FaWhatsapp size={29} className="text-green-500" />

@@ -45,15 +45,17 @@ const Project = () => {
               <p className="bg-[#F2EFE5] dark:bg-gray-900 text-gray-900 dark:text-white text-base mt-5 text-center">
                 {project.description}
               </p>
-              <div className="flex items-center gap-4 mt-3">
+              <div className="flex items-center gap-4 mt-4">
                 <a
                   href={project.github}
-                  className="flex items-center gap-2 font-medium bg-white dark:bg-gray-900 text-gray-900 dark:text-white"
+                  className="flex items-center gap-2 font-medium bg-[#F2EFE5] dark:bg-gray-900 text-gray-900 dark:text-white"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <FaGithub className="text-2xl" />
+                  <FaGithub className="text-2xl" /> Source Code
                 </a>
+              </div>
+              <div className="flex items-center gap-4 mt-3">
                 <a
                   href={project.link}
                   target="_blank"

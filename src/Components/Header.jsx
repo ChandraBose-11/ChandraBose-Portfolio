@@ -12,7 +12,7 @@ const Header = () => {
       <div className="max-w-[90%] mx-auto py-3 flex items-center justify-between font-inter">
         {/* Logo */}
         <div>
-          <h1 className="text-[2.5rem] font-bold text-[#000] hover:text-[#fe5617] ">
+          <h1 className="text-[2.5rem] font-bold text-[#000] hover:text-[#fe5617] dark:text-[#fe5617]  ">
             Portfolio
           </h1>
         </div>

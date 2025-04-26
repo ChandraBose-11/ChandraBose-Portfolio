@@ -12,14 +12,13 @@ const Home = () => {
             I’m <span className="text-[#214f66]">Chandra Bose</span>
           </h1>
           <h2 className="text-2xl md:text-3xl font-bold flex gap-2">
-            <span className="text-[#214f66]">I’m a</span>
             <TypeAnimation
               sequence={[
                 "Welcome to my page :)",
                 2000,
-                "Full stack Developer...",
+                "I’m a Full stack Developer...",
                 2000,
-                "Web Developer...",
+                "I’m a Web Developer...",
                 2000,
                 // "Hire Me !!!  ",
                 // 2000,
