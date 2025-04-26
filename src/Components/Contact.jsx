@@ -50,9 +50,10 @@ const Contact = () => {
     >
       <div className="max-w-[90%] md:max-w-[75%] mx-auto font-inter space-y-10 py-10">
         <div className="text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-center text-[#fe5617]">
-            Get in touch
-          </h2>
+        <h2 className="text-4xl md:text-5xl font-bold text-center text-[#fe5617] flex items-center justify-center">
+      <FaEnvelope className="mr-3" /> {/* Icon with margin-right */}
+      <i>Get in touch</i>
+    </h2>
         </div>
         <div className="flex flex-col items-center md:flex-row gap-[150px] justify-center">
           <div className="flex flex-col space-y-5 text-lg md:text-xl font-semibold">

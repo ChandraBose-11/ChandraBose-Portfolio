@@ -9,7 +9,7 @@ const Home = () => {
         {/* Left Section */}
         <div className="order-2 lg:order-1 flex flex-col items-center md:items-start justify-start space-y-5 text-center md:text-left">
           <h1 className="text-3xl md:text-5xl font-bold">
-            I’m <span className="text-[#214f66]">Chandra Bose</span>
+            I’m <span className="text-[#0c6775] dark:text-[#03dac6]">Chandra Bose</span>
           </h1>
           <h2 className="text-2xl md:text-3xl font-bold flex gap-2">
             <TypeAnimation
@@ -20,8 +20,8 @@ const Home = () => {
                 2000,
                 "I’m a Web Developer...",
                 2000,
-                // "Hire Me !!!  ",
-                // 2000,
+                "Hire Me !!!  ",
+                2000,
               ]}
               wrapper="span"
               speed={50}
@@ -54,8 +54,8 @@ const Home = () => {
             </div>
           </div>
           {/* Button */}
-          <div className="hover:bg-[#59B2F4] bg-[#fe5617] px-5 py-2 rounded-2xl font-bold ">
-            <a href={Resume} target="_blank">Resume </a>
+          <div className="bg-[#fe5617] px-5 py-2 rounded-2xl font-bold ">
+          <a href={Resume} target="_blank">Download CV</a>
           </div>
         </div>
 

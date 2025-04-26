@@ -1,5 +1,6 @@
 import { FaGithub } from "react-icons/fa";
 import ProjectData from "../ProjectData/ProjectData";
+import { MdWork } from "react-icons/md";
 const Project = () => {
   return (
     <div
@@ -8,8 +9,9 @@ const Project = () => {
     >
       <div className="max-w-[90%] md:max-w-[90%] mx-auto font-inter space-y-10 py-10">
         {/* Header */}
-        <h1 className="text-4xl md:text-5xl font-bold text-center text-[#fe5617]">
-          My Projects
+        <h1 className="text-4xl md:text-5xl font-bold text-center text-[#fe5617] flex items-center justify-center">
+          <MdWork className="mr-3" /> {/* Icon with margin-right */}
+          <i>My Projects</i>
         </h1>
 
         {/* Projects Grid */}
