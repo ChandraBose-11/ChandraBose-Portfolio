@@ -33,7 +33,7 @@ const Header = () => {
             isMenuOpen ? "block" : "hidden"
           } absolute top-[70px] left-0 w-full bg-[#F2EFE5]  dark:bg-gray-900 text-white-900 dark:text-whitep-5 lg:p-0 lg:relative lg:block lg:w-auto lg:px-5 lg:py-3 lg:rounded-2xl lg:top-0`}
         >
-          <ul className="flex flex-col gap-3 lg:flex-row lg:items-center lg:gap-5 text-[14px] font-semibold">
+          <ul className="flex flex-col gap-3 lg:flex-row lg:items-center lg:gap-7 text-[14px] font-semibold">
             <Link to="home" smooth={true} duration={500}>
               <li className="hover:text-[#fe5617] cursor-pointer transition-transform duration-300 ease-in transform hover:translate-y-[-7px] ">
                 Home
@@ -55,33 +55,10 @@ const Header = () => {
               </li>
             </Link>
           </ul>
-          {/* Social Media Links for Mobile */}
-          <div
-            className={`${
-              isMenuOpen ? "block" : "hidden"
-            } lg:hidden mt-3 flex justify-center gap-5`}
-          >
-            <a
-              href="https://github.com/ChandraBose-11"
-              target="_blank"
-              className="  hover:text-[#fe5617] "
-            >
-              <FaGithub size={29} />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/chandra-bose-b838142a1/"
-              target="_blank"
-            >
-              <FaLinkedin size={29} className="text-[#0077B5]" />
-            </a>
-            <a href="mailto:Chandrubose46@gmail.com" target="_blank">
-              <FaEnvelope size={29} className="text-[#c71610]" />
-            </a>
-          </div>
         </nav>
-        <ThemeToggle />
+
         {/* Social Media Links */}
-        <div className="hidden lg:flex w-[100px] items-center justify-between">
+        <div className="hidden lg:flex w-[100px] items-center justify-between lg:gap-5">
           <a
             href="https://github.com/ChandraBose-11"
             className="hover:text-[#fe5617]"
@@ -99,6 +76,7 @@ const Header = () => {
             <FaEnvelope size={29} className="text-[#c71610]" />
           </a>
         </div>
+        <ThemeToggle />
       </div>
     </div>
   );
