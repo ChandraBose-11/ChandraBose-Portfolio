@@ -1,7 +1,8 @@
 import { FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaLinkedin} from "react-icons/fa";
 import { useState } from "react";
+
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -109,7 +110,7 @@ const Contact = () => {
               value={formData.name}
               onChange={handleChange}
               required
-              className="border border-gray-300 rounded-md p-3"
+              className="border border-gray-300 rounded-md p-3 dark:text-black"
             />
             <input
               type="email"
@@ -118,7 +119,7 @@ const Contact = () => {
               value={formData.email}
               onChange={handleChange}
               required
-              className="border border-gray-300 rounded-md p-3"
+              className="border border-gray-300 rounded-md p-3 dark:text-black"
             />
             <textarea
               name="message"
@@ -126,7 +127,7 @@ const Contact = () => {
               value={formData.message}
               onChange={handleChange}
               required
-              className="border border-gray-300 rounded-md p-3 h-32"
+              className="border border-gray-300 rounded-md p-3 h-32  dark:text-black"
             ></textarea>
             <button
               type="submit"
@@ -149,9 +150,6 @@ const Contact = () => {
         </div>
       </div>
     </div>
-    //     </div>
-    //   </div>
-    // </div>
   );
 };
 
