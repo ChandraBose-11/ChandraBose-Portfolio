@@ -1,8 +1,7 @@
 import { FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
-import { FaGithub, FaLinkedin} from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { useState } from "react";
-
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -98,7 +97,7 @@ const Contact = () => {
           {/* Contact Form */}
           <form
             onSubmit={handleSubmit}
-            className="flex flex-col gap-5 w-full max-w-md"
+            className="flex flex-col gap-5 w-full max-w-md "
           >
             <h2 className="text-2xl font-bold text-[#fe5617] text-center">
               Send a Message
