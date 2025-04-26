@@ -109,7 +109,7 @@ const Contact = () => {
               value={formData.name}
               onChange={handleChange}
               required
-              className="border border-gray-300 rounded-md p-3 dark:text-black"
+              className="border border-gray-300 rounded-md p-3"
             />
             <input
               type="email"
@@ -118,7 +118,7 @@ const Contact = () => {
               value={formData.email}
               onChange={handleChange}
               required
-              className="border border-gray-300 rounded-md p-3 dark:text-black"
+              className="border border-gray-300 rounded-md p-3"
             />
             <textarea
               name="message"
@@ -126,7 +126,7 @@ const Contact = () => {
               value={formData.message}
               onChange={handleChange}
               required
-              className="border border-gray-300 rounded-md p-3 h-32  dark:text-black"
+              className="border border-gray-300 rounded-md p-3 h-32"
             ></textarea>
             <button
               type="submit"
@@ -149,6 +149,9 @@ const Contact = () => {
         </div>
       </div>
     </div>
+    //     </div>
+    //   </div>
+    // </div>
   );
 };
 
