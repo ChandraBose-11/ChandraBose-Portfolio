@@ -22,7 +22,7 @@ const Footer = () => {
             <FaGithub size={29} />
           </a>
           <a
-            href="https://www.linkedin.com/in/chandra-bose-b838142a1/"
+            href="http://www.linkedin.com/in/Chandrabose11"
             target="_blank"
           >
             <FaLinkedin size={29} className="text-[#0077B5]" />
