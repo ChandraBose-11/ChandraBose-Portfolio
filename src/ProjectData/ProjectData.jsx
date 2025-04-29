@@ -49,8 +49,8 @@ const ProjectData = [
     title: "CULINERIES WEBPAGE",
     description:
       "A Culineries static webpage landing using html and css and bootstrap .",
-    link: "",
-    github: "",
+    link: "https://flourishing-blini-4ad3a4.netlify.app/",
+    github: "https://github.com/ChandraBose-11/Culineries-Project",
     image: "Culineries.png",
     tech: ["Html", "Css", "BootStrap"],
   },
