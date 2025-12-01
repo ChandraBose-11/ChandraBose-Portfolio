@@ -44,7 +44,7 @@ const Project = () => {
                   ))}
               </div>
 
-              <p className="bg-[#F2EFE5] dark:bg-gray-900 text-gray-900 dark:text-white text-[1px] text-base mt-5 text-center">
+              <p className="bg-[#F2EFE5] dark:bg-gray-900 text-gray-900 text-[14px] dark:text-white  text-base mt-5 text-center">
                 {project.description}
               </p>
               <div className="flex justify-between gap-4 mt-6 text-sm text-red-500 dark:text-white">
