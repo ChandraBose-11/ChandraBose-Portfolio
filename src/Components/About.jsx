@@ -16,6 +16,7 @@ import {
   SiMysql,
   SiPostman,
   SiRender,
+  SiInsomnia,
 } from "react-icons/si";
 
 import { DiVisualstudio } from "react-icons/di";
@@ -132,6 +133,10 @@ const About = () => {
             <div className="flex flex-col items-center space-y-2 border-2 border-gray-200 rounded-2xl p-4 shadow-md bg-white dark:bg-slate-800 shadow-slate-100 border-3 hover:shadow-xl transition duration-300">
               <SiPostman size={40} className="text-[#ef5b25]" />
               <span className="font-bold">Postman</span>
+            </div>
+             <div className="flex flex-col items-center space-y-2 border-2 border-gray-200 rounded-2xl p-4 shadow-md bg-white dark:bg-slate-800 shadow-slate-100 border-3 hover:shadow-xl transition duration-300">
+              <SiInsomnia size={40} className="text-[#5800cf]" />
+              <span className="font-bold">Insomnia</span>
             </div>
 
             <div className="flex flex-col items-center space-y-2 border-2 border-gray-200 rounded-2xl p-4 shadow-md bg-white dark:bg-slate-800 shadow-slate-100 border-3 hover:shadow-xl transition duration-300">

@@ -2,77 +2,81 @@ import React from "react";
 
 const ProjectData = [
   {
-    title: "WEDDING-EVENT MANAGEMENT",
+    title: "Wedding Event Management",
     description:
-      "Wedding event management app designed to simplify the wedding planning process. Users can find malls, catering, decorations, DJs, photographers all in one place.",
+      "A complete wedding event management platform designed to simplify planning. Users can explore venues, catering services, decorations, DJs, and photographers — all in one place. Features Google Authentication and fully responsive UI.",
     link: "https://weddingwise-management.netlify.app/",
-    github: "https://github.com/ChandraBose-11/WeddingWiseManagement-Frontend",
+    github:
+      "https://github.com/ChandraBose-11/WeddingWiseManagement-Frontend",
     image: "WeddingWise 1.png",
     tech: [
       "React JS",
-      "React Redux",
-      "React DND",
-      "Tailwind",
+      "Redux",
+      "React DnD",
+      "Tailwind CSS",
       "Node JS",
-      "ExpressJS",
+      "Express JS",
       "MongoDB",
-      "JWt",
-      "Google Authentication",
+      "JWT Authentication",
+      "Google OAuth",
     ],
   },
-  {
-  title: "MERN STACK BLOG APP",
-  description:
-    "A MERN-based blogging platform offering authentication, rich text editing, image uploads, responsive design, and easy tools to create, edit, delete, and manage posts.",
-  link: "https://bloggerhunt-app.netlify.app",
-  github: "https://github.com/ChandraBose-11/Mern-Stack-Blog-App",
-  image: "Blogger-hunt.png",
-  tech: [
-    "React JS",
-    "Context API",
-    "Tailwind CSS",
-    "Node JS",
-    "ExpressJS",
-    "MongoDB",
-    "JWT Authentication",
-    "Multer",
-    "Cloudinary"
-  ],
-},
 
   {
-    title: "GITHUB PROFILE FINDER",
+    title: "MERN Stack Blog App",
     description:
-      "The GitHub Profile Finder is based on the Java Script DOM Manipulation with the utilization of the GitHub API for getting the Users profile",
+      "A fully functional blogging platform built with the MERN stack. Includes authentication, rich text editor, image uploads, and a smooth responsive UI. Users can create, edit, delete, and manage posts effortlessly.",
+    link: "https://bloggerhunt-app.netlify.app",
+    github: "https://github.com/ChandraBose-11/Mern-Stack-Blog-App",
+    image: "Blogger-hunt.png",
+    tech: [
+      "React JS",
+      "Context API",
+      "Tailwind CSS",
+      "Node JS",
+      "Express JS",
+      "MongoDB",
+      "JWT Authentication",
+      "Multer",
+      "Cloudinary",
+    ],
+  },
+
+  {
+    title: "GitHub Profile Finder",
+    description:
+      "A GitHub user search app built using JavaScript DOM manipulation and GitHub API integration. Users can find public profiles, repositories, and activity instantly.",
     link: "https://github-accountfinder.netlify.app/",
     github:
       "https://github.com/ChandraBose-11/Fetch-Project-Github-Profile-Finder",
     image: "githubfinder.png",
     tech: [
-      "React JS",
-      "BootStrap",
-      "DOM Manipulation",
       "JavaScript",
-      "Api Integration ",
+      "DOM Manipulation",
+      "GitHub API",
+      "React JS",
+      "Bootstrap",
     ],
   },
+
   {
-    title: "REACT WEATHER PRO",
+    title: "React Weather Pro",
     description:
-      "Weather app fetching real-time data using OpenWeatherMap API. Built with React.js.",
+      "A real-time weather application built with React.js. Fetches live weather data from the OpenWeatherMap API and displays temperature, humidity, and conditions with a clean UI.",
     link: "https://reactweatherapp-pro.netlify.app/",
     github: "https://github.com/ChandraBose-11/Weather-App",
     image: "Weather-App.png",
-    tech: ["React JS", "React-Icons", "Axios", "Tailwind Css", "Weather Api"],
+    tech: ["React JS", "React Icons", "Axios", "Tailwind CSS", "Weather API"],
   },
+
   {
-    title: "CULINERIES WEBPAGE",
+    title: "Culineries Webpage",
     description:
-      "A Culineries static webpage landing using html and css and bootstrap .",
+      "A fully responsive static landing page built using HTML, CSS, and Bootstrap. Designed to showcase a modern food and culinary brand.",
     link: "https://culineries-webpage.netlify.app/",
     github: "https://github.com/ChandraBose-11/Culineries-Project",
     image: "Culineries.png",
-    tech: ["Html", "Css", "BootStrap"],
+    tech: ["HTML", "CSS", "Bootstrap"],
   },
 ];
 
