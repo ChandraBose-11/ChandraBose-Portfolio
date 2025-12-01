@@ -21,6 +21,26 @@ const ProjectData = [
     ],
   },
   {
+  title: "MERN STACK BLOG APP",
+  description:
+    "A fully functional blogging platform built with the MERN stack. It features secure user authentication, a rich text editor, image uploads, and a smooth, responsive UI. Users can create, edit, delete, and manage blog posts effortlessly.",
+  link: "https://bloggerhunt-app.netlify.app",
+  github: "https://github.com/ChandraBose-11/Mern-Stack-Blog-App",
+  image: "Blogger-hunt.png",
+  tech: [
+    "React JS",
+    "Context API",
+    "Tailwind CSS",
+    "Node JS",
+    "ExpressJS",
+    "MongoDB",
+    "JWT Authentication",
+    "Multer",
+    "Cloudinary"
+  ],
+},
+
+  {
     title: "GITHUB PROFILE FINDER",
     description:
       "The GitHub Profile Finder is based on the Java Script DOM Manipulation with the utilization of the GitHub API for getting the Users profile",
