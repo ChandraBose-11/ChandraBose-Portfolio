@@ -28,26 +28,26 @@ const Project = () => {
                 className="rounded-xl mb-4 w-full h-[150px] object-cover"
               />
 
-              <h1 className="text-[#fe5617] font-extrabold text-[24px] text-center mb-2">
+              <h1 className="text-[#fe5617] font-extrabold text-[20px] text-center mb-2">
                 {project.title}
               </h1>
 
-              <div className="flex flex-wrap gap-2 justify-center mt-3 ">
+              <div className="flex flex-wrap gap-2 justify-center mt-2 ">
                 {project.tech &&
                   project.tech.map((tech, index) => (
                     <span
                       key={index}
-                      className="bg-gray-200 dark:bg-gray-700 rounded-full px-3 py-1 text-sm font-semibold text-sky-700 dark:text-amber-300"
+                      className="bg-gray-200 dark:bg-gray-700 rounded-full px-2 py-1 text-[15px] font-semibold text-sky-700 dark:text-amber-300"
                     >
                       {tech}
                     </span>
                   ))}
               </div>
 
-              <p className="bg-[#F2EFE5] dark:bg-gray-900 text-gray-900 dark:text-white text-base mt-5 text-center">
+              <p className="bg-[#F2EFE5] dark:bg-gray-900 text-gray-900 dark:text-white text-[18px] mt-5 text-center">
                 {project.description}
               </p>
-              <div className="flex items-center gap-4 mt-4">
+              <div className="flex justify-between gap-4 mt-6 text-sm text-red-500 dark:text-white">
                 <a
                   href={project.github}
                   className="flex items-center gap-2 font-medium bg-[#F2EFE5] dark:bg-gray-900 text-gray-900 dark:text-white"
@@ -56,8 +56,7 @@ const Project = () => {
                 >
                   <FaGithub className="text-2xl" /> Source Code
                 </a>
-              </div>
-              <div className="flex items-center gap-4 mt-3">
+
                 <a
                   href={project.link}
                   target="_blank"
