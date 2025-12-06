@@ -7,7 +7,7 @@ const Home = () => {
   return (
     <div
       id="home"
-      className="bg-white dark:bg-gray-900 text-gray-900 dark:text-white py-16 md:py-24"
+      className="bg-white dark:bg-gray-900 text-gray-900 dark:text-white py-16 md:py-15"
     >
       <div className="max-w-[85%] mx-auto font-inter grid grid-cols-1 md:grid-cols-2 gap-12 items-center min-h-[80vh]">
 
@@ -69,7 +69,7 @@ const Home = () => {
         {/* RIGHT SECTION */}
         <div className="order-1 lg:order-2 flex justify-center lg:justify-end items-center">
           <img
-            className="w-[75%] md:w-[85%] max-w-[460px] h-auto rounded-[50px] shadow-xl"
+            className="w-[75%] md:w-[80%] max-w-[400px] h-auto rounded-[50px] shadow-xl"
             src="/ChandraBose.png"
             alt="Profile"
           />
