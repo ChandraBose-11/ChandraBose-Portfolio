@@ -1,6 +1,8 @@
 import React from "react";
 import educationData from "../ProjectData/educationData";
 import { FaGraduationCap } from "react-icons/fa";
+import { motion } from "framer-motion";
+
 const Education = () => {
   return (
     <section
@@ -8,18 +10,34 @@ const Education = () => {
       id="education"
     >
       <div className="max-w-6xl mx-auto">
-      <h2 className="text-4xl font-bold text-center text-[#fe5617] mb-12 flex justify-center items-center gap-3">
-          <FaGraduationCap className="text-5xl" /> 
+
+        {/* Title Animation */}
+        <motion.h2
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4 }}
+          className="text-4xl font-bold text-center text-[#fe5617] mb-12 flex justify-center items-center gap-3"
+        >
+          <FaGraduationCap className="text-5xl" />
           <i>Education</i>
-        </h2>
+        </motion.h2>
 
         <div className="grid md:grid-cols-2 gap-10 items-center">
-          {/* Left Side - Education List */}
-          <div className="space-y-8">
+
+          {/* Left Side – Education List */}
+          <motion.div
+            initial={{ opacity: 0, x: -25 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.4 }}
+            className="space-y-8"
+          >
             {educationData.map((edu, index) => (
-              <div
+              <motion.div
                 key={index}
-                className="bg-white  border border-gray-200 dark:bg-slate-800 shadow-slate-100 p-5 rounded-2xl shadow-md hover:shadow-xl transition duration-300"
+                initial={{ opacity: 0, y: 25 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.35, delay: index * 0.1 }}
+                className="bg-white border border-gray-200 dark:bg-slate-800 shadow-slate-100 p-5 rounded-2xl shadow-md hover:shadow-xl transition duration-300"
               >
                 <h3 className="text-2xl font-semibold text-[#0c6775] dark:text-[#03dac6]">
                   {edu.course}
@@ -30,18 +48,24 @@ const Education = () => {
                 <p className="text-black dark:text-white">
                   {edu.startYear} - {edu.endYear}
                 </p>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
 
-          {/* Right Side - Image (Hidden on small screens) */}
-          <div className="hidden md:block">
+          {/* Right Side – Image */}
+          <motion.div
+            initial={{ opacity: 0, x: 25 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.4 }}
+            className="hidden md:block"
+          >
             <img
-              src="Education.png"
+              src="/project-images/Education.png"
               alt="Education Illustration"
-              className="w-full h-auto "
+              className="w-full h-auto"
             />
-          </div>
+          </motion.div>
+
         </div>
       </div>
     </section>

@@ -30,7 +30,7 @@ const ThemeToggle = () => {
       className=" bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200"
       size="sm"
       color="light" pill
-      rounded
+      rounded="true"
     >
       {isDarkMode ? "🌞" : "🌙"}
     </Button>

@@ -8,7 +8,8 @@ import Project from "./Components/Project";
 import Contact from "./Components/Contact";
 import Footer from "./Components/Footer";
 import Education from "./Components/Education";
-import SingleProject from "./Components/SingleProject"; // NEW
+import SingleProject from "./Components/SingleProject";
+import Internship from "./Components/Internship";
 
 const App = () => {
   return (
@@ -25,6 +26,7 @@ const App = () => {
                 <Home />
                 <About />
                 <Education />
+                <Internship/>
                 <Project />
                 <Contact />
                 <Footer />

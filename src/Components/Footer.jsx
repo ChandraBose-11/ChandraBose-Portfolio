@@ -1,41 +1,85 @@
-import { FaGithub, FaLinkedin, FaInstagram, FaWhatsapp } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa";
+import { useState, useEffect } from "react";
 
 const Footer = () => {
+  const [showTop, setShowTop] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 300) {
+        setShowTop(true);
+      } else {
+        setShowTop(false);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
-    <footer className="bg-white dark:bg-gray-900 text-gray-900 dark:text-white py-6">
-      <div className="max-w-[90%] md:max-w-[75%] mx-auto text-center space-y-2">
-        <p className="text-sm md:text-base font-medium">
-          © {new Date().getFullYear()} Chandra Bose. All rights reserved.
-        </p>
-        <p className="text-sm md:text-base font-medium">
-          Made with ❤️ by
-          <a href="#" className="underline hover:text-[#ffffff]">
-            Chandra Bose
-          </a>
-        </p>
-        <div className="flex justify-center gap-4 mt-2">
-        <a
+    <footer className="bg-white dark:bg-gray-900 text-gray-900 dark:text-white border-t border-gray-200 dark:border-gray-700">
+
+      <div className="max-w-[90%] md:max-w-[75%] mx-auto text-center py-10 space-y-6">
+
+        <h2 className="text-2xl font-bold text-[#fe5617] tracking-wide">
+          Chandra Bose
+        </h2>
+
+        <div className="flex justify-center gap-6 text-3xl">
+          <a
             href="https://github.com/ChandraBose-11"
-            className="hover:text-[#fe5617]"
             target="_blank"
+            className="hover:scale-110 transition-all hover:text-[#fe5617]"
           >
-            <FaGithub size={29} />
+            <FaGithub />
           </a>
+
           <a
             href="http://www.linkedin.com/in/Chandrabose11"
             target="_blank"
+            className="hover:scale-110 transition-all text-[#0077B5]"
           >
-            <FaLinkedin size={29} className="text-[#0077B5]" />
+            <FaLinkedin />
           </a>
+
           <a
             href="https://wa.me/919952978290"
             target="_blank"
-            className="hover:text-[#17fe23]"
+            className="hover:scale-110 transition-all text-green-500"
           >
-            <FaWhatsapp size={29} className="text-green-500" />
+            <FaWhatsapp />
           </a>
         </div>
+
+        <div className="w-full h-[1px] bg-gray-300 dark:bg-gray-700 mx-auto" />
+
+        <p className="text-sm opacity-80">
+          © {new Date().getFullYear()} Chandra Bose. All rights reserved.
+        </p>
+
+        <p className="text-sm">
+          Made with ❤️ by{" "}
+          <a
+            href="#"
+            className="font-semibold text-[#fe5617] hover:underline"
+          >
+            Chandra Bose
+          </a>
+        </p>
       </div>
+
+      {showTop && (
+        <button
+          onClick={scrollToTop}
+          className="fixed bottom-6 right-6 z-50 bg-[#fe5617] text-white p-3 rounded-full shadow-xl hover:scale-110 transition-all"
+        >
+          ↑
+        </button>
+      )}
     </footer>
   );
 };

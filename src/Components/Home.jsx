@@ -3,6 +3,9 @@ import { FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
 import Resume from "../assets/Resume.pdf";
 
+// ⭐ motion added
+import { motion } from "framer-motion";
+
 const Home = () => {
   return (
     <div
@@ -12,12 +15,27 @@ const Home = () => {
       <div className="max-w-[85%] mx-auto font-inter grid grid-cols-1 md:grid-cols-2 gap-12 items-center min-h-[80vh]">
 
         {/* LEFT SECTION */}
-        <div className="order-2 lg:order-1 flex flex-col items-center md:items-start justify-center space-y-7 text-center md:text-left px-2 md:px-0">
-          <h1 className="text-3xl md:text-5xl font-bold leading-tight">
+        <motion.div
+          initial={{ opacity: 0, x: -35 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.45 }}
+          className="order-2 lg:order-1 flex flex-col items-center md:items-start justify-center space-y-7 text-center md:text-left px-2 md:px-0"
+        >
+          <motion.h1
+            initial={{ opacity: 0, y: -25 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.35 }}
+            className="text-3xl md:text-5xl font-bold leading-tight"
+          >
             I’m <span className="text-[#0c6775] dark:text-[#03dac6]">Chandra Bose</span>
-          </h1>
+          </motion.h1>
 
-          <h2 className="text-2xl md:text-3xl font-bold flex gap-2 leading-snug">
+          <motion.h2
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.35 }}
+            className="text-2xl md:text-3xl font-bold flex gap-2 leading-snug"
+          >
             <TypeAnimation
               sequence={[
                 "Welcome to my page :)",
@@ -34,18 +52,28 @@ const Home = () => {
               style={{ fontSize: "1em", display: "inline-block" }}
               repeat={Infinity}
             />
-          </h2>
+          </motion.h2>
 
-          <p className="text-lg md:text-xl font-medium leading-relaxed max-w-[620px]">
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4 }}
+            className="text-lg md:text-xl font-medium leading-relaxed max-w-[620px]"
+          >
             I'm a passionate, dedicated, and creative individual who thrives on
             pushing boundaries and learning new technologies. Enthusiastic
             Entry-Level MERN Stack Developer adept in Express.js, React,
             Node.js, and MongoDB, committed to driving success through
             innovation and teamwork.
-          </p>
+          </motion.p>
 
           {/* CONTACT INFO */}
-          <div className="flex flex-col space-y-4 md:space-y-0 md:flex-row md:gap-8 text-lg md:text-xl font-semibold">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.4 }}
+            className="flex flex-col space-y-4 md:space-y-0 md:flex-row md:gap-8 text-lg md:text-xl font-semibold"
+          >
             <div className="flex items-center gap-3">
               <FaLocationDot className="text-[#ce3939]" size={20} />
               <span>Chennai</span>
@@ -58,22 +86,35 @@ const Home = () => {
               <FaEnvelope className="text-[#c24731]" size={20} />
               <span>Chandrubose46@gmail.com</span>
             </div>
-          </div>
+          </motion.div>
 
           {/* BUTTON */}
-          <div className="bg-[#fe5617] px-6 py-3 rounded-2xl font-bold shadow-md hover:scale-105 transition">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.35 }}
+            className="bg-[#fe5617] px-6 py-3 rounded-2xl font-bold shadow-md hover:scale-105 transition"
+          >
             <a href={Resume} target="_blank">Download CV</a>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
 
         {/* RIGHT SECTION */}
-        <div className="order-1 lg:order-2 flex justify-center lg:justify-end items-center">
-          <img
+        <motion.div
+          initial={{ opacity: 0, x: 35 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.45 }}
+          className="order-1 lg:order-2 flex justify-center lg:justify-end items-center"
+        >
+          <motion.img
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.45 }}
             className="w-[75%] md:w-[80%] max-w-[400px] h-auto rounded-[50px] shadow-xl"
-            src="/ChandraBose.png"
+            src="/project-images/ChandraBose.png"
             alt="Profile"
           />
-        </div>
+        </motion.div>
 
       </div>
     </div>

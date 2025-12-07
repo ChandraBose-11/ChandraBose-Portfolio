@@ -2,61 +2,75 @@ import { FaGithub } from "react-icons/fa";
 import ProjectData from "../ProjectData/ProjectData";
 import { MdWork } from "react-icons/md";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const Project = () => {
   return (
     <div
       id="project"
-      className="bg-white dark:bg-gray-900 text-gray-900 dark:text-white min-h-screen flex items-center"
+      className="bg-white dark:bg-gray-900 text-gray-900 dark:text-white min-h-screen py-24"
     >
-      <div className="max-w-[100%] mx-auto font-inter space-y-16 py-24">
-        
+      <div className="max-w-6xl mx-auto font-inter space-y-16">
+
         {/* Header */}
-        <h1 className="text-4xl md:text-6xl font-extrabold text-center text-[#fe5617] flex items-center justify-center gap-4">
+        <motion.h1
+          initial={{ opacity: 0, y: -40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-4xl md:text-6xl font-extrabold text-center text-[#fe5617] flex items-center justify-center gap-4"
+        >
           <MdWork size={50} className="animate-pulse" />
           <i>My Projects</i>
-        </h1>
+        </motion.h1>
 
-        {/* Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-14 place-items-center">
+        {/* Cards */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.6 }}
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12"
+        >
           {ProjectData.map((project, idx) => (
-            <div
+            <motion.div
               key={idx}
-              className="bg-[#F6F4EC] dark:bg-gray-800 
-              w-full max-w-[360px] h-[520px]
-              p-4 rounded-2xl shadow-lg flex flex-col border border-gray-200 dark:border-gray-700 
-              hover:shadow-2xl hover:scale-[1.04] transition-all duration-300"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="bg-[#F6F4EC] dark:bg-gray-800 border border-gray-200 dark:border-gray-700  shadow-slate-100  hover:shadow-xl  
+              rounded-2xl shadow-lg hover:shadow-2xl hover:scale-[1.03] transition-all duration-300 
+              p-5 flex flex-col h-[500px]"
             >
               {/* Image */}
-              <img
-                src={project.image}
-                alt={project.title}
-                className="rounded-xl w-full h-[180px] object-cover mb-6 shadow-sm"
-              />
+              <div className="w-full h-[190px] mb-5">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="rounded-xl w-full h-full object-cover shadow-sm"
+                />
+              </div>
 
               {/* Title */}
-              <h1 className="text-[#fe5617] font-bold text-[20px] text-center mb-6">
+              <h1 className="text-[#fe5617] font-bold text-xl text-center mb-3">
                 {project.title}
               </h1>
 
-              {/* Description — auto grows without blank gap */}
-              <p className="text-gray-700 dark:text-gray-300 text-[15px] leading-relaxed text-center flex-grow">
+              {/* Description */}
+              <p className="text-gray-700 dark:text-gray-300 text-sm text-center flex-grow leading-relaxed">
                 {project.description}
               </p>
 
-              {/* Button always at bottom */}
-              <div className="flex justify-center w-full mt-auto ">
+              {/* Buttons */}
+              <div className="flex flex-col gap-3 mt-auto">
                 <Link
                   to={`/project/${idx}`}
-                  className="text-[#fe5617] font-semibold text-lg hover:underline underline-offset-2"
+                  className="bg-[#fe5617] text-white px-4 py-2 rounded-lg text-center font-semibold hover:bg-[#e84f13] transition-all"
                 >
-                  View Details →
+                  View Details
                 </Link>
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
-
+        </motion.div>
       </div>
     </div>
   );
