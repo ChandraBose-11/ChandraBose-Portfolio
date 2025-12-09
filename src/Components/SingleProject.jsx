@@ -49,7 +49,7 @@ const SingleProject = () => {
         >
           <img
             src={project.images[index]}
-            className="w-full h-full  object-fill  rounded-[40px] bg-white dark:bg-gray-900 p-4 "
+            className="w-full h-full  object-contain  rounded-[40px] bg-white dark:bg-gray-900 p-4 "
           />
 
           {/* SLIDER BUTTONS */}
@@ -72,7 +72,7 @@ const SingleProject = () => {
             {project.images.map((_, i) => (
               <div
                 key={i}
-                className={`w-3 h-3 rounded-full transition-all ${
+                className={`w-3 h-3 rounded-full  transition-all ${
                   index === i ? "bg-[#fe5617] scale-125" : "bg-gray-400"
                 }`}
               ></div>
@@ -91,7 +91,10 @@ const SingleProject = () => {
           <div className="space-y-6">
             <h2 className="text-3xl font-semibold text-[#fe5617]">Overview</h2>
             <p className="text-lg leading-relaxed text-gray-700 dark:text-gray-300 tracking-wide">
-              {project.details}
+              {project.description}
+            </p>
+            <p className="text-lg leading-relaxed text-gray-700 dark:text-gray-300 tracking-wide">
+              {project.para}
             </p>
           </div>
 
