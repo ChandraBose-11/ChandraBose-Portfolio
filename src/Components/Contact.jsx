@@ -9,6 +9,7 @@ const Contact = () => {
     email: "",
     message: "",
   });
+
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [success, setSuccess] = useState(null);
 
@@ -19,6 +20,7 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setSuccess(null);
 
     try {
       const response = await fetch("https://api.web3forms.com/submit", {
@@ -44,12 +46,13 @@ const Contact = () => {
   };
 
   return (
-    <div
+    <section
       id="contact"
-      className="bg-white dark:bg-gray-900 text-gray-900 dark:text-white min-h-screen flex items-center justify-center"
+      className="min-h-screen flex items-center justify-center bg-white dark:bg-gray-900 text-gray-900 dark:text-white"
     >
-      <div className="w-[90%] md:w-[80%] mx-auto py-16 space-y-12">
+      <div className="w-[90%] md:w-[80%] mx-auto py-16 space-y-14">
 
+        {/* TITLE */}
         <motion.h2
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -83,12 +86,17 @@ const Contact = () => {
               </div>
             </div>
 
-            <h2 className="text-xl font-bold text-center mt-6">Follow Me</h2>
+            <h3 className="text-xl font-bold text-center mt-6">Follow Me</h3>
             <div className="flex justify-center gap-6 text-3xl">
-              <a href="https://github.com/ChandraBose-11" target="_blank">
+              <a href="https://github.com/ChandraBose-11" target="_blank" rel="noreferrer">
                 <FaGithub />
               </a>
-              <a href="http://www.linkedin.com/in/Chandrabose11" target="_blank" className="text-[#0077B5]">
+              <a
+                href="http://www.linkedin.com/in/Chandrabose11"
+                target="_blank"
+                rel="noreferrer"
+                className="text-[#0077B5]"
+              >
                 <FaLinkedin />
               </a>
               <a href="mailto:Chandrubose46@gmail.com" className="text-[#c71610]">
@@ -105,9 +113,9 @@ const Contact = () => {
             transition={{ duration: 0.6 }}
             className="w-full p-8 rounded-3xl bg-white dark:bg-gray-800 shadow-xl space-y-6"
           >
-            <h2 className="text-2xl font-bold text-[#fe5617] text-center">
+            <h3 className="text-2xl font-bold text-center text-[#fe5617]">
               Send a Message
-            </h2>
+            </h3>
 
             {/* NAME */}
             <div className="relative">
@@ -116,13 +124,14 @@ const Contact = () => {
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
-                onFocus={() => {}}
                 required
-                className="w-full p-3 border rounded-md outline-none focus:border-[#fe5617]"
+                className="w-full p-3 border rounded-md bg-transparent outline-none focus:border-[#fe5617]"
               />
               <label
-                className={`absolute left-3 transition-all bg-white dark:bg-gray-800 px-1
-                ${formData.name ? "-top-3 text-sm" : "top-3 text-gray-500"}`}
+                className={`pointer-events-none absolute left-3 bg-white dark:bg-gray-800 px-1 text-gray-500 transition-all
+                ${formData.name
+                  ? "-top-2 text-sm"
+                  : "top-1/2 -translate-y-1/2 text-base"}`}
               >
                 Your Name
               </label>
@@ -136,11 +145,13 @@ const Contact = () => {
                 value={formData.email}
                 onChange={handleChange}
                 required
-                className="w-full p-3 border rounded-md outline-none focus:border-[#fe5617]"
+                className="w-full p-3 border rounded-md bg-transparent outline-none focus:border-[#fe5617]"
               />
               <label
-                className={`absolute left-3 transition-all bg-white dark:bg-gray-800 px-1
-                ${formData.email ? "-top-3 text-sm" : "top-3 text-gray-500"}`}
+                className={`pointer-events-none absolute left-3 bg-white dark:bg-gray-800 px-1 text-gray-500 transition-all
+                ${formData.email
+                  ? "-top-2 text-sm"
+                  : "top-1/2 -translate-y-1/2 text-base"}`}
               >
                 Your Email
               </label>
@@ -152,12 +163,15 @@ const Contact = () => {
                 name="message"
                 value={formData.message}
                 onChange={handleChange}
+                rows="4"
                 required
-                className="w-full p-3 h-32 border rounded-md outline-none focus:border-[#fe5617]"
+                className="w-full p-3 border rounded-md bg-transparent outline-none focus:border-[#fe5617]"
               />
               <label
-                className={`absolute left-3 transition-all bg-white dark:bg-gray-800 px-1
-                ${formData.message ? "-top-3 text-sm" : "top-3 text-gray-500"}`}
+                className={`pointer-events-none absolute left-3 bg-white dark:bg-gray-800 px-1 text-gray-500 transition-all
+                ${formData.message
+                  ? "-top-2 text-sm"
+                  : "top-6 text-base"}`}
               >
                 Your Message
               </label>
@@ -172,15 +186,19 @@ const Contact = () => {
             </button>
 
             {success === true && (
-              <p className="text-green-600 text-center">Message sent successfully!</p>
+              <p className="text-green-600 text-center">
+                Message sent successfully!
+              </p>
             )}
             {success === false && (
-              <p className="text-red-600 text-center">Failed to send message.</p>
+              <p className="text-red-600 text-center">
+                Failed to send message.
+              </p>
             )}
           </motion.form>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
