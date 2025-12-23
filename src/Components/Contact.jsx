@@ -50,14 +50,13 @@ const Contact = () => {
     >
       <div className="w-[90%] md:w-[80%] mx-auto py-16 space-y-12">
 
-        {/* TITLE */}
         <motion.h2
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-4xl md:text-5xl font-bold text-center text-[#fe5617] flex items-center justify-center gap-2"
+          className="text-4xl md:text-5xl font-bold text-center text-[#fe5617]"
         >
-          <FaEnvelope /> <i>Get in Touch</i>
+          Get in Touch
         </motion.h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 place-items-center">
@@ -67,48 +66,44 @@ const Contact = () => {
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
-            className="w-full p-8 rounded-3xl backdrop-blur-xl bg-white/10 dark:bg-gray-800/20 shadow-xl border border-white/20 space-y-6"
+            className="w-full p-8 rounded-3xl bg-white dark:bg-gray-800 shadow-xl space-y-6"
           >
             <div className="space-y-4 text-lg font-semibold">
               <div className="flex items-center gap-3">
-                <FaLocationDot className="text-red-600" size={22} />
-                <span>Chennai</span>
+                <FaLocationDot className="text-red-600" />
+                Chennai
               </div>
-
               <div className="flex items-center gap-3">
-                <FaPhoneAlt className="text-green-600" size={22} />
-                <span>9952978290</span>
+                <FaPhoneAlt className="text-green-600" />
+                9952978290
               </div>
-
               <div className="flex items-center gap-3">
-                <FaEnvelope className="text-orange-600" size={22} />
-                <span>Chandrubose46@gmail.com</span>
+                <FaEnvelope className="text-orange-600" />
+                Chandrubose46@gmail.com
               </div>
             </div>
 
-            <div className="pt-4">
-              <h2 className="text-xl font-bold text-center mb-3">Follow Me</h2>
-              <div className="flex justify-center gap-6 text-3xl">
-                <a href="https://github.com/ChandraBose-11" target="_blank">
-                  <FaGithub />
-                </a>
-                <a href="http://www.linkedin.com/in/Chandrabose11" target="_blank" className="text-[#0077B5]">
-                  <FaLinkedin />
-                </a>
-                <a href="mailto:Chandrubose46@gmail.com" className="text-[#c71610]">
-                  <FaEnvelope />
-                </a>
-              </div>
+            <h2 className="text-xl font-bold text-center mt-6">Follow Me</h2>
+            <div className="flex justify-center gap-6 text-3xl">
+              <a href="https://github.com/ChandraBose-11" target="_blank">
+                <FaGithub />
+              </a>
+              <a href="http://www.linkedin.com/in/Chandrabose11" target="_blank" className="text-[#0077B5]">
+                <FaLinkedin />
+              </a>
+              <a href="mailto:Chandrubose46@gmail.com" className="text-[#c71610]">
+                <FaEnvelope />
+              </a>
             </div>
           </motion.div>
 
-          {/* FORM CARD */}
+          {/* FORM */}
           <motion.form
             onSubmit={handleSubmit}
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
-            className="w-full p-8 rounded-3xl backdrop-blur-xl bg-white/10 dark:bg-gray-800/20 shadow-xl border border-white/20 space-y-6"
+            className="w-full p-8 rounded-3xl bg-white dark:bg-gray-800 shadow-xl space-y-6"
           >
             <h2 className="text-2xl font-bold text-[#fe5617] text-center">
               Send a Message
@@ -121,14 +116,14 @@ const Contact = () => {
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
-                placeholder=" "
+                onFocus={() => {}}
                 required
-                className="peer w-full p-3 border rounded-md bg-transparent outline-none focus:border-[#fe5617]"
+                className="w-full p-3 border rounded-md outline-none focus:border-[#fe5617]"
               />
-              <label className="absolute left-3 top-3 text-gray-500 transition-all
-                peer-placeholder-shown:top-3
-                peer-focus:-top-3 peer-focus:text-sm
-                peer-focus:bg-white dark:peer-focus:bg-gray-900 px-1">
+              <label
+                className={`absolute left-3 transition-all bg-white dark:bg-gray-800 px-1
+                ${formData.name ? "-top-3 text-sm" : "top-3 text-gray-500"}`}
+              >
                 Your Name
               </label>
             </div>
@@ -140,14 +135,13 @@ const Contact = () => {
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
-                placeholder=" "
                 required
-                className="peer w-full p-3 border rounded-md bg-transparent outline-none focus:border-[#fe5617]"
+                className="w-full p-3 border rounded-md outline-none focus:border-[#fe5617]"
               />
-              <label className="absolute left-3 top-3 text-gray-500 transition-all
-                peer-placeholder-shown:top-3
-                peer-focus:-top-3 peer-focus:text-sm
-                peer-focus:bg-white dark:peer-focus:bg-gray-900 px-1">
+              <label
+                className={`absolute left-3 transition-all bg-white dark:bg-gray-800 px-1
+                ${formData.email ? "-top-3 text-sm" : "top-3 text-gray-500"}`}
+              >
                 Your Email
               </label>
             </div>
@@ -158,14 +152,13 @@ const Contact = () => {
                 name="message"
                 value={formData.message}
                 onChange={handleChange}
-                placeholder=" "
                 required
-                className="peer w-full p-3 h-32 border rounded-md bg-transparent outline-none focus:border-[#fe5617]"
+                className="w-full p-3 h-32 border rounded-md outline-none focus:border-[#fe5617]"
               />
-              <label className="absolute left-3 top-3 text-gray-500 transition-all
-                peer-placeholder-shown:top-3
-                peer-focus:-top-3 peer-focus:text-sm
-                peer-focus:bg-white dark:peer-focus:bg-gray-900 px-1">
+              <label
+                className={`absolute left-3 transition-all bg-white dark:bg-gray-800 px-1
+                ${formData.message ? "-top-3 text-sm" : "top-3 text-gray-500"}`}
+              >
                 Your Message
               </label>
             </div>
@@ -173,16 +166,16 @@ const Contact = () => {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="w-full py-3 rounded-md font-semibold text-white bg-gradient-to-r from-[#fe5617] to-[#ff3c00] disabled:opacity-50"
+              className="w-full py-3 rounded-md font-semibold text-white bg-gradient-to-r from-[#fe5617] to-[#ff3c00]"
             >
               {isSubmitting ? "Sending..." : "Send Message"}
             </button>
 
             {success === true && (
-              <p className="text-green-500 text-center">Message sent successfully!</p>
+              <p className="text-green-600 text-center">Message sent successfully!</p>
             )}
             {success === false && (
-              <p className="text-red-500 text-center">Failed to send message.</p>
+              <p className="text-red-600 text-center">Failed to send message.</p>
             )}
           </motion.form>
         </div>
