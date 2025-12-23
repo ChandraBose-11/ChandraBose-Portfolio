@@ -1,6 +1,5 @@
-import { FaPhoneAlt, FaEnvelope } from "react-icons/fa";
+import { FaPhoneAlt, FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { useState } from "react";
 import { motion } from "framer-motion";
 
@@ -37,7 +36,7 @@ const Contact = () => {
       } else {
         setSuccess(false);
       }
-    } catch (error) {
+    } catch {
       setSuccess(false);
     } finally {
       setIsSubmitting(false);
@@ -47,11 +46,11 @@ const Contact = () => {
   return (
     <div
       id="contact"
-      className="bg-white dark:bg-gray-900 text-gray-900 dark:text-white min-h-screen flex items-center justify-center "
+      className="bg-white dark:bg-gray-900 text-gray-900 dark:text-white min-h-screen flex items-center justify-center"
     >
       <div className="w-[90%] md:w-[80%] mx-auto py-16 space-y-12">
 
-        {/* Title */}
+        {/* TITLE */}
         <motion.h2
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -61,18 +60,16 @@ const Contact = () => {
           <FaEnvelope /> <i>Get in Touch</i>
         </motion.h2>
 
-        {/* Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 place-items-center ">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 place-items-center">
 
           {/* INFO CARD */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
-            className="w-full p-8 rounded-3xl backdrop-blur-xl bg-white/10 dark:bg-gray-800/20 shadow-xl border border-white/20 space-y-6  shadow-slate-100  hover:shadow-xl "
+            className="w-full p-8 rounded-3xl backdrop-blur-xl bg-white/10 dark:bg-gray-800/20 shadow-xl border border-white/20 space-y-6"
           >
             <div className="space-y-4 text-lg font-semibold">
-
               <div className="flex items-center gap-3">
                 <FaLocationDot className="text-red-600" size={22} />
                 <span>Chennai</span>
@@ -92,26 +89,13 @@ const Contact = () => {
             <div className="pt-4">
               <h2 className="text-xl font-bold text-center mb-3">Follow Me</h2>
               <div className="flex justify-center gap-6 text-3xl">
-                <a
-                  href="https://github.com/ChandraBose-11"
-                  target="_blank"
-                  className="hover:text-[#fe5617] dark:text-white"
-                >
+                <a href="https://github.com/ChandraBose-11" target="_blank">
                   <FaGithub />
                 </a>
-
-                <a
-                  href="http://www.linkedin.com/in/Chandrabose11"
-                  target="_blank"
-                  className="text-[#0077B5]"
-                >
+                <a href="http://www.linkedin.com/in/Chandrabose11" target="_blank" className="text-[#0077B5]">
                   <FaLinkedin />
                 </a>
-
-                <a
-                  href="mailto:Chandrubose46@gmail.com"
-                  className="text-[#c71610]"
-                >
+                <a href="mailto:Chandrubose46@gmail.com" className="text-[#c71610]">
                   <FaEnvelope />
                 </a>
               </div>
@@ -124,65 +108,72 @@ const Contact = () => {
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
-            className="w-full p-8 rounded-3xl backdrop-blur-xl bg-white/10 dark:bg-gray-800/20 shadow-xl border border-white/20 space-y-6  shadow-slate-100  hover:shadow-xl " 
+            className="w-full p-8 rounded-3xl backdrop-blur-xl bg-white/10 dark:bg-gray-800/20 shadow-xl border border-white/20 space-y-6"
           >
             <h2 className="text-2xl font-bold text-[#fe5617] text-center">
               Send a Message
             </h2>
 
-            {/* FLOATING LABEL INPUT */}
+            {/* NAME */}
             <div className="relative">
               <input
                 type="text"
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
+                placeholder=" "
                 required
-                className="w-full p-3 border rounded-md bg-transparent dark:bg-transparent dark:text-white focus:border-[#fe5617] outline-none"
+                className="peer w-full p-3 border rounded-md bg-transparent outline-none focus:border-[#fe5617]"
               />
-              <label className={`absolute left-3 top-3 text-gray-500 transition-all pointer-events-none ${
-                formData.name ? " -top-3 bg-white dark:bg-gray-900 px-1 text-sm" : ""
-              }`}>
+              <label className="absolute left-3 top-3 text-gray-500 transition-all
+                peer-placeholder-shown:top-3
+                peer-focus:-top-3 peer-focus:text-sm
+                peer-focus:bg-white dark:peer-focus:bg-gray-900 px-1">
                 Your Name
               </label>
             </div>
 
+            {/* EMAIL */}
             <div className="relative">
               <input
                 type="email"
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
+                placeholder=" "
                 required
-                className="w-full p-3 border rounded-md bg-transparent dark:bg-transparent dark:text-white focus:border-[#fe5617] outline-none"
+                className="peer w-full p-3 border rounded-md bg-transparent outline-none focus:border-[#fe5617]"
               />
-              <label className={`absolute left-3 top-3 text-gray-500 transition-all pointer-events-none ${
-                formData.email ? " -top-3 bg-white dark:bg-gray-900 px-1 text-sm" : ""
-              }`}>
+              <label className="absolute left-3 top-3 text-gray-500 transition-all
+                peer-placeholder-shown:top-3
+                peer-focus:-top-3 peer-focus:text-sm
+                peer-focus:bg-white dark:peer-focus:bg-gray-900 px-1">
                 Your Email
               </label>
             </div>
 
+            {/* MESSAGE */}
             <div className="relative">
               <textarea
                 name="message"
                 value={formData.message}
                 onChange={handleChange}
+                placeholder=" "
                 required
-                className="w-full p-3 h-32 border rounded-md bg-transparent dark:bg-transparent dark:text-white focus:border-[#fe5617] outline-none"
+                className="peer w-full p-3 h-32 border rounded-md bg-transparent outline-none focus:border-[#fe5617]"
               />
-              <label className={`absolute left-3 top-3 text-gray-500 transition-all pointer-events-none ${
-                formData.message ? " -top-3 bg-white dark:bg-gray-900 px-1 text-sm" : ""
-              }`}>
+              <label className="absolute left-3 top-3 text-gray-500 transition-all
+                peer-placeholder-shown:top-3
+                peer-focus:-top-3 peer-focus:text-sm
+                peer-focus:bg-white dark:peer-focus:bg-gray-900 px-1">
                 Your Message
               </label>
             </div>
 
-            {/* GRADIENT BUTTON */}
             <button
               type="submit"
               disabled={isSubmitting}
-              className="w-full py-3 rounded-md font-semibold text-white bg-gradient-to-r from-[#fe5617] to-[#ff3c00] hover:opacity-90 disabled:opacity-50"
+              className="w-full py-3 rounded-md font-semibold text-white bg-gradient-to-r from-[#fe5617] to-[#ff3c00] disabled:opacity-50"
             >
               {isSubmitting ? "Sending..." : "Send Message"}
             </button>
@@ -191,7 +182,7 @@ const Contact = () => {
               <p className="text-green-500 text-center">Message sent successfully!</p>
             )}
             {success === false && (
-              <p className="text-red-500 text-center">Failed to send message. Try again.</p>
+              <p className="text-red-500 text-center">Failed to send message.</p>
             )}
           </motion.form>
         </div>
