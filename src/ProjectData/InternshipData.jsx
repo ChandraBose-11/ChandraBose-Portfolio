@@ -3,7 +3,7 @@ const InternshipData = [
     title: "Frontend Internship – Pepy Technologies",
     company: "Pepy Technologies",
     internName: "Chandra Bose A",
-    duration: "June 2 – December 2",
+    duration: "December 2- May 30",
     
     image: "/project-images/Internship.png",   // your certificate image (put inside public/certificates)
 
